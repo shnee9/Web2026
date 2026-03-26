@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>실습 2-4</title>
+    <style>
+      .box{
+        width:300px;
+        height:70px;     
+        margin:0 auto;
+      }
+			#style1 {        
+        background-color:#2121f4;          
+        color:white;      
+      }    
+      #style2 {
+        background: linear-gradient(to right, #ff00cc, #3333ff); /* 그라데이션: 시작색->끝색 */
+        color: white;
+      }
+
+      #style3 {
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+        color: white;
+      }   
+      h1 {
+        text-align: center;
+        line-height: 70px;
+      }
+      #basic{        
+      text-shadow: 4px 3px 10px yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="style1">
+      <h1 id="basic">웹 개발 기초</h1>
+    </div>
+    <div class="box" id="style2">
+      <h1>웹 개발 중급</h1>
+    </div>
+    <div class="box" id="style3">
+      <h1>웹 개발 고급</h1>
+    </div>
+  </body>
+</html>
