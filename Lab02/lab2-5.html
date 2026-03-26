@@ -29,7 +29,11 @@
 
 		tbody th {
 			background-color: #8fd3df;   /* 첫 번째 열 배경색 */
+      text-align: left; /* 첫 번째 열의 텍스트를 왼쪽 정렬 */
 		}
+    thead th:first-child { /* 첫 번째 행의 첫 번째 열 */
+      text-align: left;
+    }
 
 		.bgimg {
 			background-image: url("flower.jpg"); /* 배경 이미지 */
