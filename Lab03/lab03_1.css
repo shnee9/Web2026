@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: "맑은 고딕", Arial, sans-serif;
+    color: #222;
+}
+
+#container {
+    width: 1100px;
+    margin: 30px auto;
+    background: #fff;
+}
+
+/* 상단 헤더 */
+#top_header {
+    background: #0d47a1;
+    color: white;
+    padding: 25px 30px 15px 30px;
+}
+
+#title h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+#title p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* 상단 메뉴 */
+#top_nav {
+    margin-top: 10px;
+}
+
+#navi {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#navi > li {
+    position: relative;
+    list-style: none;
+}
+
+#navi > li > a {
+    display: block;
+    width: 120px;
+    text-align: center;
+    padding: 12px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navi > li > a:hover {
+    background: white;
+    color: #0d47a1;
+}
+
+/* 드롭다운 메뉴 */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 120px;
+    background: #1f5fbf;
+    list-style: none;
+    z-index: 100;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.submenu li a:hover {
+    background: #ffffff;
+    color: #0d47a1;
+}
+
+#navi > li:hover .submenu {
+    display: block;
+}
+
+/* 메인 영역 */
+#main_wrap {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* 왼쪽 로그인 */
+#login {
+    width: 170px;
+    background: #0d47a1;
+    padding: 15px 12px;
+    color: white;
+    min-height: 550px;
+}
+
+#login label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+}
+
+.btn_box {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.btn_box input {
+    flex: 1;
+    padding: 6px 4px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn_box input:hover {
+    background: #dcdcdc;
+}
+
+/* 가운데 본문 */
+#post {
+    flex: 1;
+}
+
+.card {
+    background: white;
+    border: 1px solid #999;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 14px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.card_content {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.card_content figure {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.card_content img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.card_content p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 오른쪽 광고 */
+#ad {
+    width: 190px;
+}
+
+.ad_box {
+    border: 1px solid #888;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #fffefc;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.ad_box p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.ad_box img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 하단 footer */
+footer {
+    background: #0d47a1;
+    padding: 12px 0;
+}
+
+#foot ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#foot li {
+    list-style: none;
+}
+
+#foot a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#foot a:hover {
+    text-decoration: underline;
+}
+
+/* 선택: 스마트폰 화면 */
+@media screen and (max-width: 768px) {
+    #container {
+        width: 95%;
+    }
+
+    #main_wrap {
+        flex-direction: column;
+    }
+
+    #login,
+    #ad,
+    #post {
+        width: 100%;
+    }
+
+    #login {
+        min-height: auto;
+    }
+
+    .card_content {
+        flex-direction: column;
+    }
+
+    .card_content img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    #navi {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
